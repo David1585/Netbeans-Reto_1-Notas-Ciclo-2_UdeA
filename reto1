@@ -1,0 +1,36 @@
+package reto1_netbeans;
+
+import java.util.*;
+
+public class Reto1_Netbeans {
+
+    public static void main(String[] args) {
+
+        double[] listaNotas = {4.1, 4.8, 1.5, 2.3, 0.1, 0.9, 1.4, 1.8, 1.5, 3.0};
+        reporte(listaNotas);
+
+    }
+
+    public static double[] reporte(double[] listaNotas) {
+        double promedio = 0;
+        double notaBaja = 0, notaAlta = 0;
+        for (int i = 0; i < listaNotas.length; i++) {
+
+            promedio = promedio + listaNotas[i];
+
+        }
+
+        notaBaja = Arrays.stream(listaNotas).min().getAsDouble();
+        notaAlta = Arrays.stream(listaNotas).max().getAsDouble();
+
+        int tamanio = listaNotas.length;
+        promedio = promedio / tamanio;
+        
+        double []Resultado= {promedio, notaBaja, notaAlta};
+        
+        System.out.print(Arrays.toString(Resultado));
+        
+        return Resultado;
+
+    }
+}
