@@ -11,7 +11,7 @@ public class Reto1_Netbeans {
         reporte(listaNotas);
 
     }
-//se genera el metodo teniendo en cuenta que lo que recibira es un arreglo llamado listaNotas
+    //se genera el metodo teniendo en cuenta que lo que recibira es un arreglo llamado listaNotas
     public static double[] reporte(double[] listaNotas) {
         //se declaran las variaables con las cuales ha de trabajar el método
         double promedio = 0;
