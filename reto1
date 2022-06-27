@@ -16,23 +16,26 @@ public class Reto1_Netbeans {
         //se declaran las variaables con las cuales ha de trabajar el método
         double promedio = 0;
         double notaBaja = 0, notaAlta = 0;
-        
+        //se realiza un ciclo for para que nos lea el array 
         for (int i = 0; i < listaNotas.length; i++) {
-
+            //se realiza la suma de todas las notas  
             promedio = promedio + listaNotas[i];
 
         }
-
+        // se calcula la nota mas baja junto con la mas alta 
         notaBaja = Arrays.stream(listaNotas).min().getAsDouble();
         notaAlta = Arrays.stream(listaNotas).max().getAsDouble();
-
+        //se genera una variable que contenga el tamanio original del arreglo (algo innecesario)
         int tamanio = listaNotas.length;
+        //Se calcula el promedio 
         promedio = promedio / tamanio;
-        
+        /*teniendo todos los datos solicitados se genera un nuevo arreglo que 
+        almacene el promedio, la nota mas baja y la nota mas alta cada una en una sola 
+        posicion*/
         double []Resultado= {promedio, notaBaja, notaAlta};
         
         System.out.print(Arrays.toString(Resultado));
-        
+        //se retorna el resultado 
         return Resultado;
 
     }
